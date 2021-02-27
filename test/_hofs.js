@@ -14,7 +14,7 @@ describe("Inhabitants", () => {
   });
   describe("The getPeopleOver method", () => {
     it("should return an array containing only full names of people older than a certain age", () => {
-      let people = inhabitants.getPeopleOver(50);
+      let people = inhabitants.getPeopleOver(50); //age = 50
       let expected = ["Jane Doe", "Grace Hopper"];
 
       expect(people).to.be.an("array");

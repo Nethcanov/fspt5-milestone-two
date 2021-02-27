@@ -1,5 +1,6 @@
+// incomplete!
 // Complete the "getPeopleOver" method.
-// This method takes a number (age) as its only argument
+// done - This method takes a number (age) as its only argument
 // This method should return an array of strings with
 // the first + last name of every person that's older than
 // "age" years old.
@@ -10,10 +11,13 @@
 // is an array of objects in this form:
 // [
 //   { firstName: "John", lastName: "Smith", age: 40 },
-//   { firstName: "Jane", lastName: "Doe", age: 68 },
-//   { firstName: "Grace", lastName: "Hopper", age: 85 },
+//   { firstName: "Jane", lastName: "Doe", age: 68 },//EXPECTING THIS ONE
+//   { firstName: "Grace", lastName: "Hopper", age: 85 },//EXPECTING THIS ONE
 //   { firstName: "Bart", lastName: "Simpson", age: 10 }
 // ];
+// access array of objects -
+// 1 use filter to return those aged >50
+// 2 return only firstname and lastname
 
 // To build this method, you can only use Higher Order Functions available
 // in the Array prototype (forEach, map, filter, find, reduce or others)
@@ -24,7 +28,10 @@ class Inhabitants {
     this.people = people;
   }
 
-  getPeopleOver(age) {}
+  getPeopleOver(age) {
+    const peopleOfAge = this.people.filter(p => p.age > age);
+    return peopleOfAge;
+  }
 }
 
 module.exports = Inhabitants;

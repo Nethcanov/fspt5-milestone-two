@@ -35,20 +35,20 @@ Give yourself a grade for each question. Explain why you gave yourself that grad
 
 ### 1. Create and extend classes
 
-- Grade:
-- Explanation:
+- Grade: 4/3
+- Explanation: Took a long time initial methods were too complicated to implement
 
 ### 2. Create tests for classes
 
-- Grade:
-- Explanation:
+- Grade: 4/3
+- Explanation: Think I have got it but not 100% confident
 
 ### 3. Use HOFs from the Array prototype
 
-- Grade:
-- Explanation:
+- Grade: 2
+- Explanation: ran out of time, first step done
 
 ### 4. Create the reverse linked list method
 
-- Grade:
-- Explanation:
+- Grade: 2/1
+- Explanation: Still a bit vague on this - struggle with including all the steps, ran out of time

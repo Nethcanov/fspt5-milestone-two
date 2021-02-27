@@ -50,22 +50,36 @@ class LinkedList {
   }
 
   reverseList() {
-    // The idea is start with the head and go advancing in the list, changing the direction of pointers
-    // So the current head will be pointing "the other way" (which means null), and therefore will become the new tail of the list
-    // Then we will take the following node on the list, and reverse its pointer, so it points to what has previously the Head (but now is the tail)
-    // And we will do this progressively with each node, till we reach the "current tail", that will become the new head
-    // Your code starts here:
-    // Create a variable 'node' to store the reference to this.head. This var will keep track of the "current" node as we advance on the list
-    // Create another var 'initialHead', to also point to this.head. We will need it at the end.
-    // Create a variable to store the "previous" node. Since we start at the head, "previous" should be null when initialized (because there's nothing "before" the head)
-    // while there is a node to visit (so, node exists)
-    // create a var to save the location of the next node, or you will lose it!!!
-    // reverse the current node's "next" pointer, it should now point to the "previous" node
-    // update previous node to be the current node
-    // update current node to the next node (you saved it) or null at end of list
-    // end of while
-    // make the head point to what was, until now, the tail
-    // make the tail point to what was initially the head
+    /* The idea is start with the head and go advancing in the list, changing the direction of pointers
+    So the current head will be pointing "the other way" (which means null), and therefore will become the new tail of the list
+    Then we will take the following node on the list, and reverse its pointer, so it points to what has previously the Head (but now is the tail)
+    And we will do this progressively with each node, till we reach the "current tail", that will become the new head
+    Your code starts here:
+    \ Create a variable 'node' to store the reference to this.head. This var will keep track of the "current" node as we advance on the list
+    \ Create another var 'initialHead', to also point to this.head. We will need it at the end.
+    \ Create a variable to store the "previous" node. Since we start at the head, "previous" should be null when initialized (because there's nothing "before" the head)
+    \ while there is a node to visit (so, node exists)
+    create a var to save the location of the next node, or you will lose it!!!
+    reverse the current node's "next" pointer, it should now point to the "previous" node
+    update previous node to be the current node
+    update current node to the next node (you saved it) or null at end of list
+    end of while
+    make the head point to what was, until now, the tail
+    make the tail point to what was initially the head
+    */
+    //1 traverse the linked list
+    let node = this.head; // to track the current node
+    let initialHead = this.head; //so it can be made the tail and doesn't get lost
+    let previousNode = null; // to track the previous node as we move along the list
+
+    while (node) {
+      // while node exists
+      previousNode = node; // assign node visited to previousNode
+      node = next.node; // move to next node
+    }
+    node = this.tail; // value of new head is the tail
+    node.next = previousNode;
+    this.tail = initialHead;
   }
 }
 
