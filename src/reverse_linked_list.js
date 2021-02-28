@@ -74,12 +74,7 @@ class LinkedList {
 
     while (node) {
       // while node exists
-      previousNode = node; // assign node visited to previousNode
-      node = next.node; // move to next node
     }
-    node = this.tail; // value of new head is the tail
-    node.next = previousNode;
-    this.tail = initialHead;
   }
 }
 

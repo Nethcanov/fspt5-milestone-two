@@ -29,9 +29,9 @@ class Inhabitants {
   }
 
   getPeopleOver(age) {
-    const peopleOfAge = this.people.filter(p => p.age > age);
-    return peopleOfAge;
+    let peopleOfAge = this.people.filter(p => p.age > age);
+    let fullnames = peopleOfAge.map(p => `${p.firstName} ${p.lastName}`);
+    return fullnames;
   }
 }
-
 module.exports = Inhabitants;
